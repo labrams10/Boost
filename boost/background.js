@@ -176,7 +176,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     case "unlock domain":
       response += "unlocking domain";
-      //TODO maybe need to set localstorage value here
+      // Dont need to set local storage, only way to hit this code is from options.js
+      //local storage is reset there
       domainLocked = false;
       break;
 
