@@ -1,5 +1,4 @@
 {
-
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
   "description": "Gives It A Boost",
@@ -10,15 +9,13 @@
     "scripts": ["background.js"]
   },
 
-  "permissions": [
-    "tabs","storage"
-  ],
+  "permissions": ["tabs", "storage"],
 
   "content_scripts": [
     {
       "exclude_globs": [""],
-      "matches": ["*://*/*","file://*/*"],
-      "js": ["boost_linker.js"],
+      "matches": ["*://*/*", "file://*/*"],
+      "js": ["boost_linker.js", "bookmarks.js"],
       "css": ["linker.css"]
     }
   ],
@@ -28,20 +25,17 @@
   },
 
   "page_action": {
-  "default_icon": {
-    "16": "boost_icon.svg"
+    "default_icon": {
+      "16": "boost_icon.svg"
     },
     "default_title": "Lock this Domain for Boost"
   },
 
-  "web_accessible_resources": [
-    "bottomBar.html"
-  ],
+  "web_accessible_resources": ["bottomBar.html"],
 
   "icons": {
     "16": "icons/page-16.png",
     "32": "icons/page-32.png",
     "48": "icons/page-48.png"
   }
-
 }
