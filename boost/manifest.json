@@ -15,7 +15,7 @@
     {
       "exclude_globs": [""],
       "matches": ["*://*/*", "file://*/*"],
-      "js": ["boost_linker.js", "bookmarks.js"],
+      "js": ["bookmarks.js", "boost_linker.js"],
       "css": ["linker.css"]
     }
   ],
